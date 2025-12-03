@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Bad Bunny</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 { color: #333; }
+
+        .btn {
+            display: block;
+            width: 250px;
+            margin: 15px auto;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        /* Colores de los álbumes */
+        .uvst { background: #FFD300; }      /* Un Verano Sin Ti = amarillo */
+        .x100pre { background: #000000; }   /* X100PRE = negro */
+        .nadiesabe { background: #E8E2D5; color: black; } /* hueso */
+        .debi { background: #9AFF9A; color: black; }      /* verde claro */
+
+        /* Animación suave */
+        .btn:hover {
+            transform: scale(1.07);
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        /* Caja con info */
+        .info {
+            display: none;
+            padding: 15px;
+            margin: 20px auto;
+            width: 80%;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        /* ---------- BOTÓN SECRETO INVISIBLE ---------- */
+        #secreto {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+
+            /* invisible total */
+            background: transparent;
+            border: none;
+            width: 40px;
+            height: 40px;
+            opacity: 0;        /* invisible */
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        function abrir(id) {
+            document.querySelectorAll('.info').forEach(div => div.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+
+        // lleva al mensaje especial
+        function irVanessa() {
+            window.location.href = "vanessa.html";
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Conciertos de Bad Bunny</h1>
+
+    <!-- BOTÓN SECRETO  invisible -->
+    <button id="secreto" onclick="irVanessa()"></button>
+
+    <!-- BOTONES -->
+    <button class="btn uvst" onclick="abrir('uvst')">Un Verano Sin Ti</button>
+    <button class="btn x100pre" onclick="abrir('x100pre')">X100PRE</button>
+    <button class="btn nadiesabe" onclick="abrir('nadie')">Nadie Sabe Lo Que Va A Pasar Mañana</button>
+    <button class="btn debi" onclick="abrir('fotos')">Debí Tirar Más Fotos</button>
+
+    <!-- INFORMACIÓN -->
+    <div id="uvst" class="info">
+        <h2>Un Verano Sin Ti</h2>
+        <p>Álbum veraniego/pop-urbano. Marcó el estilo más relajado y global de Bad Bunny. Fue un éxito mundial tras su lanzamiento.</p>
+    </div>
+
+    <div id="x100pre" class="info">
+        <h2>X100PRE</h2>
+        <p><p>Álbum debut de Bad Bunny. Mezcla trap, reguetón y pop-rap. Lanzado el 24 de diciembre de 2018. Marcó el inicio de su carrera internacional.</p>
+</div>
+</p>
+    </div>
+
+    <div id="nadie" class="info">
+        <h2>Nadie Sabe Lo Que Va A Pasar Mañana</h2>
+        <p>Salió el 13 de octubre de 2023. Tiene 22 canciones. 
+
+Es un álbum más variado que mezcla géneros: no se enfoca solo en reguetón; incluye trap, hip-hop y otros estilos. 
+Apple Music - Web Player.</p>
+
+<p>Puedes usar estos datos dentro del contenido del botón correspondiente, por ejemplo en “Nadie Sabe Lo Que Va a Pasar Mañana”.</p>
+    </div>
+
+    <div id="fotos" class="info">
+        <h2>DeBí TiRAR MáS FOToS</h2>
+        <p>Este álbum muestra un lado nostálgico y emocional de Bad Bunny.  
+        Habla sobre recuerdos, momentos que no regresan y la importancia de capturar la vida mientras sucede.
+        Tiene un estilo más íntimo y maduro.</p>
+    </div>
+
+</body>
+</html>
